@@ -1,0 +1,14 @@
+C:\testing\CS\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.deps.json
+C:\testing\CS\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.runtimeconfig.json
+C:\testing\CS\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.runtimeconfig.dev.json
+C:\testing\CS\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.dll
+C:\testing\CS\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.pdb
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.csprojAssemblyReference.cache
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.csproj.CoreCompileInputs.cache
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorAssemblyInfo.cache
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorAssemblyInfo.cs
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.AssemblyInfoInputs.cache
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.AssemblyInfo.cs
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorTargetAssemblyInfo.cache
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.dll
+C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.pdb

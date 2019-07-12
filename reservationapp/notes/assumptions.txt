@@ -1,0 +1,2 @@
+1. reservations array will always be in numeric order (a sort can be used to make sure that it is)
+2. the rule of "zero 1 night gaps" has been upheld, i.e., it will not check for existing reservations

@@ -19,6 +19,7 @@ namespace reservationapp.Controllers
         [HttpGet]
         public ActionResult<fullsearch> Get()
         {
+            List<string> hellolist = new List<string>();
             fullsearch testobj4;
             System.Console.WriteLine("hello world");
             using (StreamReader r = new StreamReader(@"./bookings/test-case.json"))
@@ -32,7 +33,7 @@ namespace reservationapp.Controllers
             }
                 // System.Console.WriteLine(JsonConvert.SerializeObject(testobj4));
 
-                _manager.findCampgrounds(testobj4);
+                hellolist = _manager.findCampgrounds(testobj4);
 
 
             // return new string[] { "value1", "value2" };
@@ -49,6 +50,7 @@ namespace reservationapp.Controllers
 
             // fullsearch o1 = JObject.Parse(File.ReadAllText("../bookings/test-case.json"));
 
+            System.Console.WriteLine(hellolist);
             return testobj4;
         }
 

@@ -40,9 +40,10 @@ namespace reservationapp.services
 
         public List<string> findCampgrounds(fullsearch fullsearch)
         {
-            campsiteChecklist();
             _fullsearch = fullsearch;
             List<string> result = new List<string>();
+            campsiteChecklist();
+
 
             int searchYear = Int32.Parse(fullsearch.search.startDate.Substring(0, 3));
             int searchMonth = Int32.Parse(fullsearch.search.startDate.Substring(5, 2));

@@ -8,5 +8,6 @@ namespace reservationapp.services
         List<string> findCampgrounds(fullsearch fullsearch);
         bool[] resetCalendar(bool[] calendar);
         string campgroundById(int id);
+        void campsiteChecklist();
     }
 }

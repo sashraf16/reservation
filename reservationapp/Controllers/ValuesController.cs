@@ -50,6 +50,7 @@ namespace reservationapp.Controllers
 
             // fullsearch o1 = JObject.Parse(File.ReadAllText("../bookings/test-case.json"));
 
+            System.Console.WriteLine("printing results");
             foreach (string c in hellolist)
             {
                 System.Console.WriteLine(c);

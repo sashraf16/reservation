@@ -11,8 +11,6 @@ namespace reservationapp.services {
             for (int i = 0; i < calendar.Length; i++) {
                 calendar[i] = false;
             }
-            System.Console.WriteLine ("reset calendar");
-
             return calendar;
         }
         public string campgroundById (int id) {
@@ -21,7 +19,7 @@ namespace reservationapp.services {
                     return c.name;
                 }
             }
-            return "hello";
+            return "none found";
         }
         public void campsiteChecklist () {
             foreach (campsite c in _fullsearch.campsites) {
@@ -45,8 +43,6 @@ namespace reservationapp.services {
             bool[] calendarMonth = new bool[daysinSearchMonth];
 
             for (int numReservations = 0; numReservations <= fullsearch.reservations.Length - 1; numReservations++) {
-
-                System.Console.WriteLine ("starting with" + fullsearch.reservations[numReservations].campsiteId);
 
                 int start = Int32.Parse (fullsearch.reservations[numReservations].startDate.Substring (8, 2));
                 int end = Int32.Parse (fullsearch.reservations[numReservations].endDate.Substring (8, 2));

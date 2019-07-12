@@ -17,19 +17,17 @@ namespace reservationapp.Controllers {
         [HttpGet]
         public ActionResult<fullsearch> Get () {
 
-            List<string> hellolist = new List<string> ();
+            List<string> openCamps = new List<string> ();
             fullsearch testobj4;
-            System.Console.WriteLine ("hello world");
             
             using (StreamReader r = new StreamReader (@"./bookings/test-case.json")) {
                 string json = r.ReadToEnd ();
-                fullsearch testobj3 = JsonConvert.DeserializeObject<fullsearch> (json);
-                testobj4 = testobj3;
+                testobj4 = JsonConvert.DeserializeObject<fullsearch> (json);
             }
-            hellolist = _manager.findCampgrounds (testobj4);
+            openCamps = _manager.findCampgrounds (testobj4);
 
             System.Console.WriteLine ("printing results");
-            foreach (string c in hellolist) {
+            foreach (string c in openCamps) {
                 System.Console.WriteLine (c);
             }
             return testobj4;

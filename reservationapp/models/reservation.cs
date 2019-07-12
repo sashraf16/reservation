@@ -5,8 +5,8 @@ namespace reservationapp.models
     public class reservation
     {
         public int campsiteId;
-        public DateTime startDate;
-        public DateTime endDate;
+        public string startDate;
+        public string endDate;
 
     }
 }

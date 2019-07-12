@@ -12,3 +12,17 @@ C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.AssemblyInfo
 C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorTargetAssemblyInfo.cache
 C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.dll
 C:\testing\CS\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.pdb
+D:\Coding Challenges\CS\reservation\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.deps.json
+D:\Coding Challenges\CS\reservation\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.runtimeconfig.json
+D:\Coding Challenges\CS\reservation\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.runtimeconfig.dev.json
+D:\Coding Challenges\CS\reservation\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.dll
+D:\Coding Challenges\CS\reservation\reservationapp\bin\Debug\netcoreapp2.1\reservationapp.pdb
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.csprojAssemblyReference.cache
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.csproj.CoreCompileInputs.cache
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorAssemblyInfo.cache
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorAssemblyInfo.cs
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.AssemblyInfoInputs.cache
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.AssemblyInfo.cs
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.RazorTargetAssemblyInfo.cache
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.dll
+D:\Coding Challenges\CS\reservation\reservationapp\obj\Debug\netcoreapp2.1\reservationapp.pdb

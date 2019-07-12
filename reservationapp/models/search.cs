@@ -4,8 +4,8 @@ namespace reservationapp.models
 {
     public class search
     {
-        public DateTime startDate;
-        public DateTime endDate;
+        public string startDate;
+        public string endDate;
 
     }
 }

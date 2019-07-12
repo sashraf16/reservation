@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using reservationapp.models;
+using reservationapp.services;
 
 namespace reservationapp.Controllers
 {
@@ -13,6 +14,7 @@ namespace reservationapp.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private manageBookings _manager = new manageBookings();
         // GET api/values
         [HttpGet]
         public ActionResult<fullsearch> Get()
@@ -28,7 +30,9 @@ namespace reservationapp.Controllers
                 // System.Console.WriteLine(JsonConvert.SerializeObject(testobj3));
                 testobj4 = testobj3;
             }
-                System.Console.WriteLine(JsonConvert.SerializeObject(testobj4));
+                // System.Console.WriteLine(JsonConvert.SerializeObject(testobj4));
+
+                _manager.findCampgrounds(testobj4);
 
 
             // return new string[] { "value1", "value2" };

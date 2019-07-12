@@ -72,8 +72,8 @@ namespace reservationapp.services
                 {
                     if (fullsearch.reservations[numReservations].campsiteId != fullsearch.reservations[numReservations + 1].campsiteId)
                     {
-                        System.Console.WriteLine(calendarMonth[wantStart - 2] + " " + calendarMonth[wantStart - 1] + " " + calendarMonth[wantStart] + "starts");
-                        System.Console.WriteLine(calendarMonth[wantEnd] + " " + calendarMonth[wantEnd + 1] + " " + calendarMonth[wantEnd + 2] + "end");
+                        // System.Console.WriteLine(calendarMonth[wantStart - 2] + " " + calendarMonth[wantStart - 1] + " " + calendarMonth[wantStart] + "starts");
+                        // System.Console.WriteLine(calendarMonth[wantEnd] + " " + calendarMonth[wantEnd + 1] + " " + calendarMonth[wantEnd + 2] + "end");
 
                         // bool flag = false;
                         if ((calendarMonth[wantStart - 2] == calendarMonth[wantStart - 1]) && (calendarMonth[wantEnd + 1] == calendarMonth[wantEnd + 2]))

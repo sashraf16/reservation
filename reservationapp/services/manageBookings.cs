@@ -89,6 +89,7 @@ namespace reservationapp.services
                             System.Console.WriteLine(fullsearch.reservations[numReservations].campsiteId + "the id");
                             calendarMonth = resetCalendar(calendarMonth);
                             System.Console.WriteLine(campgroundById(fullsearch.reservations[numReservations].campsiteId));
+                            result.Add(campgroundById(fullsearch.reservations[numReservations].campsiteId));
                         }
                         else
                         {
@@ -110,6 +111,7 @@ namespace reservationapp.services
                             System.Console.WriteLine("this will be a valid reservation");
                             calendarMonth = resetCalendar(calendarMonth);
                             System.Console.WriteLine(campgroundById(fullsearch.reservations[numReservations].campsiteId));
+                            result.Add(campgroundById(fullsearch.reservations[numReservations].campsiteId));
 
                         }
                         else
@@ -162,7 +164,7 @@ namespace reservationapp.services
             System.Console.WriteLine(fullsearch.search.startDate);
 
             string[] arr = { "hello", "hello2" };
-            result.Add("hello)");
+            // result.Add("hello)");
             return result;
         }
 

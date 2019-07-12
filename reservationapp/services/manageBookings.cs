@@ -8,9 +8,10 @@ namespace reservationapp.services
     public class manageBookings : iManagebookings
     {
         private fullsearch _fullsearch = new fullsearch();
+        Dictionary<int,Boolean> _campList = new Dictionary<int, bool>();
         public bool[] resetCalendar(bool[] calendar)
         {
-            for (int i = 0; i<calendar.Length; i++)
+            for (int i = 0; i < calendar.Length; i++)
             {
                 calendar[i] = false;
             }
@@ -22,12 +23,19 @@ namespace reservationapp.services
         {
             foreach (campsite c in _fullsearch.campsites)
             {
-                if (c.id  == id)
+                if (c.id == id)
                 {
                     return c.name;
                 }
             }
             return "hello";
+        }
+        public void campsiteChecklist()
+        {
+            foreach (campsite c in _fullsearch.campsites)
+            {
+                _campList.Add(c.id, false);
+            }
         }
 
         public List<string> findCampgrounds(fullsearch fullsearch)
@@ -75,12 +83,12 @@ namespace reservationapp.services
                     calendarMonth[updateCalendar] = true;
                 }
 
-                if (numReservations != fullsearch.reservations.Length-1)
+                if (numReservations != fullsearch.reservations.Length - 1)
                 {
                     if (fullsearch.reservations[numReservations].campsiteId != fullsearch.reservations[numReservations + 1].campsiteId)
                     {
-                        System.Console.WriteLine(calendarMonth[wantStart -2] + " " + calendarMonth[wantStart - 1] + " " + calendarMonth[wantStart] + "starts");
-                        System.Console.WriteLine(calendarMonth[wantEnd] + " " + calendarMonth[wantEnd+1]+ " " + calendarMonth[wantEnd+2] + "end");
+                        System.Console.WriteLine(calendarMonth[wantStart - 2] + " " + calendarMonth[wantStart - 1] + " " + calendarMonth[wantStart] + "starts");
+                        System.Console.WriteLine(calendarMonth[wantEnd] + " " + calendarMonth[wantEnd + 1] + " " + calendarMonth[wantEnd + 2] + "end");
 
                         // bool flag = false;
                         if ((calendarMonth[wantStart - 2] == calendarMonth[wantStart - 1]) && (calendarMonth[wantEnd + 1] == calendarMonth[wantEnd + 2]))
@@ -97,28 +105,28 @@ namespace reservationapp.services
                             calendarMonth = resetCalendar(calendarMonth);
                         }
 
-                        
+
                     }
                 }
                 else
                 {
                     // if (fullsearch.reservations[numReservations].campsiteId != fullsearch.reservations[numReservations + 1].campsiteId || numReservations + 1 == 8)
                     // {
-                        // bool flag = false;
-                        // if (calendarMonth[wantStart - 2] == false && calendarMonth[wantEnd + 2] == false)
-                        if ((calendarMonth[wantStart - 2] == calendarMonth[wantStart - 1]) && (calendarMonth[wantEnd + 1] == calendarMonth[wantEnd + 2]))
-                        {
-                            System.Console.WriteLine("this will be a valid reservation");
-                            calendarMonth = resetCalendar(calendarMonth);
-                            System.Console.WriteLine(campgroundById(fullsearch.reservations[numReservations].campsiteId));
-                            result.Add(campgroundById(fullsearch.reservations[numReservations].campsiteId));
+                    // bool flag = false;
+                    // if (calendarMonth[wantStart - 2] == false && calendarMonth[wantEnd + 2] == false)
+                    if ((calendarMonth[wantStart - 2] == calendarMonth[wantStart - 1]) && (calendarMonth[wantEnd + 1] == calendarMonth[wantEnd + 2]))
+                    {
+                        System.Console.WriteLine("this will be a valid reservation");
+                        calendarMonth = resetCalendar(calendarMonth);
+                        System.Console.WriteLine(campgroundById(fullsearch.reservations[numReservations].campsiteId));
+                        result.Add(campgroundById(fullsearch.reservations[numReservations].campsiteId));
 
-                        }
-                        else
-                        {
-                            System.Console.WriteLine("invalid resreve");
-                            calendarMonth = resetCalendar(calendarMonth);
-                        }
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("invalid resreve");
+                        calendarMonth = resetCalendar(calendarMonth);
+                    }
                     // }
                 }
 
@@ -168,6 +176,6 @@ namespace reservationapp.services
             return result;
         }
 
-        
+
     }
 }

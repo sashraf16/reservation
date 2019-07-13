@@ -1,8 +1,10 @@
 using System;
+using reservationapp.models;
+
 namespace reservationapp.services 
 {
     public interface iUpdatebookings 
     {
-        Boolean updateBooking (string[] dates);
+        Boolean updateBooking (search dates);
     }
 }

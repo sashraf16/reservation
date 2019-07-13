@@ -12,16 +12,18 @@ namespace reservationapp.services
 {
     public class updateBookings : iUpdatebookings 
     {
-        public Boolean updateBooking (string[] dates) 
+        public Boolean updateBooking (search dates) 
         {
             System.Console.WriteLine("here in the call");
             string json = File.ReadAllText (@"./bookings/test-case2.json");
             dynamic fullsearch = Newtonsoft.Json.JsonConvert.DeserializeObject (json);
-            fullsearch["search"]["startDate"] = dates[0];
-            fullsearch["search"]["endDate"] = dates[1];
+            fullsearch["search"]["startDate"] = dates.startDate;
+            fullsearch["search"]["endDate"] = dates.endDate;
             string output = Newtonsoft.Json.JsonConvert.SerializeObject (fullsearch, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText (@"./bookings/test-case2.json", output);
 
+
+            System.Console.WriteLine("worked");
             return true;
         }
     }

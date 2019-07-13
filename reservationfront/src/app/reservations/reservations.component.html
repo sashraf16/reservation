@@ -1,15 +1,40 @@
+<div>
 <button id="main" mat-button (click)="getFreeCamps()">
     retrieve data
 </button>
 
-<div>
-    <button mat-button class="result" mat-button *ngFor="let string of results">
+<button id="update" mat-button (click)="updateDates()">
+    update wanted dates
+</button>
+
+</div>
+
+
+<div class="dates">
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a start date" (dateChange)="addEvent('change', $event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="pickers" placeholder="Choose an end date" (dateChange)="addEvent2('change', $event)">
+  <mat-datepicker-toggle matSuffix [for]="pickers"></mat-datepicker-toggle>
+  <mat-datepicker #pickers></mat-datepicker>
+</mat-form-field>
+</div>
+
+
+
+
+<div class = "available">
+    <mat-card>Available Campsites: </mat-card> 
+    <button mat-button class="result" mat-button *ngFor="let string of results" (click)="sendCamp(string)">
         {{string}}
     </button>
 </div>
 
-<div>
-    month <input> 
-    day <input>
-    year<input>
+<div class="display">
+<app-displayinfo></app-displayinfo>
 </div>
+

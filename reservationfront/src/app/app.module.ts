@@ -9,10 +9,19 @@ import { RouterModule, Routes } from "@angular/router";
 import { HomepageComponent } from "./homepage/homepage.component";
 
 import { MatCardModule } from "@angular/material/card";
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 import { HttpClientModule } from '@angular/common/http';
- 
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatNativeDateModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DisplayinfoComponent } from './displayinfo/displayinfo.component';
+
 const approutes: Routes = [
   { path: "reservations", component: ReservationsComponent },
   { path: "homepage", component: HomepageComponent },
@@ -20,8 +29,21 @@ const approutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ReservationsComponent, HomepageComponent],
-  imports: [RouterModule.forRoot(approutes), BrowserModule, AppRoutingModule, MatCardModule, MatButtonModule, HttpClientModule],
+  declarations: [AppComponent, ReservationsComponent, HomepageComponent, DisplayinfoComponent],
+  imports: [
+    RouterModule.forRoot(approutes), 
+    BrowserModule, 
+    AppRoutingModule, 
+    MatCardModule, 
+    MatButtonModule, 
+    HttpClientModule, 
+    MatDatepickerModule, 
+    MatFormFieldModule, 
+    MatNativeDateModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

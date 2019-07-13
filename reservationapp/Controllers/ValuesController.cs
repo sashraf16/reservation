@@ -21,7 +21,7 @@ namespace reservationapp.Controllers {
             List<string> openCamps = new List<string> ();
             fullsearch testobj4;
             
-            using (StreamReader r = new StreamReader (@"./bookings/test-case.json")) {
+            using (StreamReader r = new StreamReader (@"./bookings/test-case2.json")) {
                 string json = r.ReadToEnd ();
                 testobj4 = JsonConvert.DeserializeObject<fullsearch> (json);
             }
@@ -42,8 +42,8 @@ namespace reservationapp.Controllers {
 
         // POST api/values
         [HttpPost]
-        public void Post ([FromBody] string[] value) {
-            System.Console.WriteLine ("going to call");
+        public void Post ([FromBody] search value) {
+            System.Console.WriteLine ("angular?");
 
             _updater.updateBooking(value);
         }

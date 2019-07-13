@@ -13,9 +13,10 @@ namespace reservationapp.Controllers {
     [ApiController]
     public class ValuesController : ControllerBase {
         private manageBookings _manager = new manageBookings ();
+        private updateBookings _updater = new updateBookings();
         // GET api/values
         [HttpGet]
-        public ActionResult<fullsearch> Get () {
+        public ActionResult<List<string>> Get () {
 
             List<string> openCamps = new List<string> ();
             fullsearch testobj4;
@@ -30,7 +31,7 @@ namespace reservationapp.Controllers {
             foreach (string c in openCamps) {
                 System.Console.WriteLine (c);
             }
-            return testobj4;
+            return openCamps;
         }
 
         // GET api/values/5
@@ -41,8 +42,10 @@ namespace reservationapp.Controllers {
 
         // POST api/values
         [HttpPost]
-        public void Post ([FromBody] string value) {
-            System.Console.WriteLine (value);
+        public void Post ([FromBody] string[] value) {
+            System.Console.WriteLine ("going to call");
+
+            _updater.updateBooking(value);
         }
 
         // PUT api/values/5

@@ -1,0 +1,15 @@
+<button id="main" mat-button (click)="getFreeCamps()">
+    retrieve data
+</button>
+
+<div>
+    <button mat-button class="result" mat-button *ngFor="let string of results">
+        {{string}}
+    </button>
+</div>
+
+<div>
+    month <input> 
+    day <input>
+    year<input>
+</div>

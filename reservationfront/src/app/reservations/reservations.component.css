@@ -1,0 +1,16 @@
+#main {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.result{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-flow: column;
+  margin: 10px;
+}
+
+button:hover{
+    background-color:rgba(128, 128, 128, 0.925);
+}

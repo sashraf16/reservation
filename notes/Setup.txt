@@ -1,3 +1,5 @@
+Note: Node may need to be installed to run Angular, and the C# api may require it's own framework to be installed
+
 The way I ran this application was all in VS code. I installed the nuget package for the "dotnet watch run" command. It automatically re-runs the dotnet run
 command when a file is saved (assuming some changes were made). Therefore, what I did was (again, in VS Code):
 

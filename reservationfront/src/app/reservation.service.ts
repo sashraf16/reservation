@@ -14,7 +14,6 @@ export class ReservationService {
   }
 
   updateWantDates(dateobj: dateobj) {
-    console.log("going to post");
     console.log(dateobj);
     return this._http.post("http://localhost:5000/api/values", dateobj);
   }

@@ -27,7 +27,6 @@ namespace reservationapp.Controllers {
             }
             openCamps = _manager.findCampgrounds (testobj4);
 
-            System.Console.WriteLine ("printing results");
             foreach (string c in openCamps) {
                 System.Console.WriteLine (c);
             }

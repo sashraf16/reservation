@@ -52,17 +52,13 @@ export class ReservationsComponent implements OnInit {
 //2019-07-07
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     // this.events.push(`${type}: ${event.value}`);
-    console.log(event.value.getMonth().toString() + "to string");
+    // console.log(event.value.getMonth().toString() + "to string");
     // console.log(event.value. + "to string2");
 
     this.day = event.value.getDate().toString();
     this.month = event.value.getMonth().toString();
     this.tempmonth = event.value.getMonth() + 1 ;
     this.year = event.value.getFullYear().toString();
-
-    console.log("month:" + this.month);
-    console.log("day" + this.day);
-    console.log("year" + this.year);
 
     if (event.value.getDate() < 10)
     {
@@ -75,21 +71,13 @@ export class ReservationsComponent implements OnInit {
     }
 
     this.startDate = this.year+"-"+this.month+"-"+this.day;
-    console.log(this.startDate); 
   }
   addEvent2(type: string, event: MatDatepickerInputEvent<Date>) {
-   // this.events.push(`${type}: ${event.value}`);
-   console.log(event.value.getMonth().toString() + "to string");
-   // console.log(event.value. + "to string2");
 
    this.day = event.value.getDate().toString();
    this.month = event.value.getMonth().toString();
    this.tempmonth = event.value.getMonth() + 1 ;
    this.year = event.value.getFullYear().toString();
-
-   console.log("month:" + this.month);
-   console.log("day" + this.day);
-   console.log("year" + this.year);
 
    if (event.value.getDate() < 10)
    {
@@ -102,28 +90,16 @@ export class ReservationsComponent implements OnInit {
    }
 
    this.endDate = this.year+"-"+this.month+"-"+this.day;
-   console.log(this.endDate); 
   }
 
   updateDates() {
-    if (this.startDate != undefined && this.endDate != undefined)
-    {
-      this.newDates.startDate = "hello";
-      this.newDates.endDate = "hello2";
-
-      console.log(this.newDates.startDate);
-      console.log(this.newDates.endDate);
-
+    if (this.startDate != undefined && this.endDate != undefined) {
       this.newDates.startDate = this.startDate;
       this.newDates.endDate = this.endDate;
     }
-
-    else{
+    else {
       console.log("please select dates");
     }
-
-    console.log(this.newDates.startDate + "start date")
-    console.log(this.newDates.endDate + "end date");
 
     this._service.updateWantDates(this.newDates).subscribe(
        data => {console.log(data)}

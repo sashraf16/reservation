@@ -25,7 +25,8 @@ import { DisplayinfoComponent } from './displayinfo/displayinfo.component';
 const approutes: Routes = [
   { path: "reservations", component: ReservationsComponent },
   { path: "homepage", component: HomepageComponent },
-  { path: '', redirectTo: "/homepage", pathMatch: 'full' }
+  { path: '', redirectTo: "/homepage", pathMatch: 'full' },
+  { path: "displayinfo", component: DisplayinfoComponent } 
 ];
 
 @NgModule({

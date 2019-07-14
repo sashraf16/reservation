@@ -14,7 +14,6 @@ namespace reservationapp.services
     {
         public Boolean updateBooking (search dates) 
         {
-            System.Console.WriteLine("here in the call");
             string json = File.ReadAllText (@"./bookings/test-case2.json");
             dynamic fullsearch = Newtonsoft.Json.JsonConvert.DeserializeObject (json);
             fullsearch["search"]["startDate"] = dates.startDate;
@@ -23,7 +22,6 @@ namespace reservationapp.services
             File.WriteAllText (@"./bookings/test-case2.json", output);
 
 
-            System.Console.WriteLine("worked");
             return true;
         }
     }

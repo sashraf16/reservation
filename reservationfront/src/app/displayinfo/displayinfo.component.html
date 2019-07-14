@@ -1,4 +1,6 @@
-<p>displayinfo works!</p>
-
 <app-reservations (campEvent)="receiveCamp($event)"></app-reservations>
-{{selectedCamp}}
+<div *ngIf="selectedCamp">
+<mat-card>
+You have selected the camp: {{selectedCamp}}
+</mat-card>
+</div>

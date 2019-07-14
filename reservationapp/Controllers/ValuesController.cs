@@ -42,10 +42,9 @@ namespace reservationapp.Controllers {
 
         // POST api/values
         [HttpPost]
-        public void Post ([FromBody] search value) {
-            System.Console.WriteLine ("angular?");
-
+        public Boolean Post ([FromBody] search value) {
             _updater.updateBooking(value);
+            return true;
         }
 
         // PUT api/values/5

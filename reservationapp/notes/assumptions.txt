@@ -1,5 +1,0 @@
-1. reservations array will always be in numeric order (a sort can be used to make sure that it is)
-2. the rule of "zero 1 night gaps" has been upheld, i.e., it will not check for existing reservations
-3. every transaction will only involve 1 month at a time, i.e., the start and end dates requested by the user, as well as the dates that are already reserved will
-    all be in the same month
-

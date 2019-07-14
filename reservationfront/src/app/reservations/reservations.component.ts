@@ -18,7 +18,7 @@ export class ReservationsComponent implements OnInit {
   startDate: string;
   endDate: string;
 
-  selectedCamp: string;
+  // selectedCamp: string;
 
   newDates: dateobj = {};
   
@@ -32,9 +32,10 @@ export class ReservationsComponent implements OnInit {
     // this.getFreeCamps();
   }
 
-  updateCamp(value: string) {
-    this.selectedCamp = value;
-  }
+  // updateCamp(value: string) {
+  //   console.log(value);
+  //   this.selectedCamp = value;
+  // }
 
   getFreeCamps() {
     this._service.retrieveFreeCamps().subscribe(
@@ -44,8 +45,8 @@ export class ReservationsComponent implements OnInit {
 
   @Output() campEvent = new EventEmitter<string>();
 
-  sendCamp() {
-    this.campEvent.emit(this.selectedCamp)
+  sendCamp(value: string) {
+    this.campEvent.emit(value)
   }
 
 //2019-07-07

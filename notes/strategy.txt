@@ -1,0 +1,29 @@
+My original intention was to build a console application, as that is the easiest to execute in single instances.
+
+However, I decided to go with an API/Front-End to showcase something modern, upgradeable, and something that would better reflect my interest and skill-level.
+With that in mind, I decided to build the most wellrounded application in a reasonable amount of time.
+
+I first developed an api with a couple of methods in the default values controller to be able to be accessible. Once that was done, I read the JSON file using 
+JSON.NET to create an object from the JSON file. After that, my idea was to create an array for the month, and then use that as a reference point to decide if
+a campsite was available for booking or not (without creating a 1-night gap). This was implemented, but for further development, it would be best to make a few 
+changes to it, so that way instead of the findcampground method doing all the logic, another method can call findcampground for each month that needs to be 
+searched.
+
+Once my API was ready, I wanted to build an Angular front-end that would allow for easy access with the API. I thought it would be a good chance for me to show
+a few of the skills I had discussed with Braden, so I used Angular's Default Mat Calendar (this is not my custom calendar date picker, it was completely taken from
+Mat Angular), along with a few other Mat Angular modules to create a not very fancy, but slightly above functional application. The dates are taken from Angular and 
+sent as a post request to the controller to update a JSON file, which then reads into the main logic of finding campgrounds. I also used an event emitter linked to
+another component, so when it shows "you have selected the camp", it is actually a parent-child relationship using event emitters to pass information between 
+components.
+
+Given more time, I would have added more thorough logic and checks, along with a more robust and user friendly front facing application. At the same time, I believe 
+it is a skill on its own to be able to take a requirement and return an interpretation and fully functioning software, with the scaffolding to allow easy upgrades
+within a short time-frame.
+
+I will mention some of the changes I had in mind:
+    Sending objects instead of primitive data types (I used an object to send data in Angular, but could have used this principal globally in both angular and api)
+    Creating a function that would call on campground on a per-month basis, therefore being a more thorough application, but also re-using the code I have written
+    Styling angular a bit better, and also using the "displayinfo" component to generate/research information to display for each campsite 
+        Potentially used a quick api to get information on the campsites in the list
+    
+    

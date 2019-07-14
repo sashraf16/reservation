@@ -1,0 +1,24 @@
+The way I ran this application was all in VS code. I installed the nuget package for the "dotnet watch run" command. It automatically re-runs the dotnet run
+command when a file is saved (assuming some changes were made). Therefore, what I did was (again, in VS Code):
+
+ctrl + ` -> open the integrated terminal OR view -> Terminal
+
+CD into the directory of the api
+...\reservation\reservationapp
+    >dotnet watch run OR >dotnet run
+This will run the api on localhost:5000
+
+
+Then,
+
+ctrl + shift + ` OR in the top right of the terminal, there is a plus button, to add a new terminal
+
+CD into the directory of the angular app
+...\reservation\reservationfront
+    >ng serve --o
+This will run the Angular app on localhost:4200 and the --o will open your browser to localhost:4200
+
+
+On the reservations page, retrieve data will use the current data in the test-case2.json file (whatever data is in there) and send back an array of available
+campsites. A user can enter a new start date and end date in the marked calendars, and hit "update wanted dates", followed by "retrieve data" to get the new array
+of available campsites. 

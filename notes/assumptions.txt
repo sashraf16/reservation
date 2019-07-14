@@ -1,0 +1,7 @@
+1. reservations array will always be in numeric order (a sort can eventually be added to make sure that it is)
+2. the rule of "zero 1 night gaps" has been upheld, i.e., it will not check for existing reservations
+3. every transaction will only involve 1 month at a time, i.e., the start and end dates requested by the user, as well as the dates that are already reserved will
+    all be in the same month
+4. transactions will be between the 3rd, and 3rd last day of the month. This is because currently the app checks for -2 and +2 days for the month. The 1 month 
+    assumption is that all data (existing reservations and desired reservations) will take place in the same month
+

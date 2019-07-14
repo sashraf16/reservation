@@ -1,0 +1,50 @@
+#main {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  /* background-color: black; */
+  /* color: white; */
+  left: 0;
+  max-width: 50%;
+}
+
+.dates {
+  float: right;
+  right: 0;
+  /* width: 50%; */
+  top: 0;
+}
+
+#update {
+  margin-top: 40px;
+  float: right;
+  right: 0;
+  top: 0;
+  padding-right: -20px;
+}
+
+mat-form-field {
+  margin: 10px;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-flow: column;
+  margin: 10px;
+  height: 50%;
+  bottom: 0;
+}
+
+
+mat-card {
+    background-color: whitesmoke;
+}
+
+.available{
+    margin-top: 80px;
+}
+
+button:hover {
+  background-color: rgba(128, 128, 128, 0.664);
+}

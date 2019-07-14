@@ -1,0 +1,6 @@
+<app-reservations (campEvent)="receiveCamp($event)"></app-reservations>
+<div *ngIf="selectedCamp">
+<mat-card>
+You have selected the camp: {{selectedCamp}}
+</mat-card>
+</div>
